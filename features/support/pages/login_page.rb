@@ -1,6 +1,4 @@
-class LoginPage
-  include Capybara::DSL
-
+class LoginPage < BasePage
   def go
     visit "/"
   end
