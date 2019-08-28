@@ -3,7 +3,7 @@ pipeline{
     stages {
         stage("Build") {
             steps {
-                sh "echo 'Simulando um Build'"
+                sh "bundle install"
             }
         }
         stage ("Tests") {
