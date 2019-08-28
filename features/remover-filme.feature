@@ -1,0 +1,22 @@
+#language: pt
+
+@login
+Funcionalidade: Remover Filme
+    Para que eu possa manter o catálogo atualizado
+    Sendo um gestor de catálogo que encontrou um título cancelado
+    Posso remover este item
+
+    Cenário: Confirmar exclusão
+    
+        Dado que "dbz" está no catálogo
+        Quando solicito a exclusão 
+        E eu confirmo a solicitação
+        Então este item deve ser removido do catálogo
+    
+    @rm_movie
+    Cenário: Cancelar exclusão
+
+        Dado que "10_coisas" está no catálogo
+        Quando solicito a exclusão
+        Mas cancelo a solicitação
+        Então este item deve permanecer no catálogo
